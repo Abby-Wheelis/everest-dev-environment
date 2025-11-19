@@ -6,7 +6,7 @@ read -p "Enter the workspace directory (default is the current directory): " WOR
 if [ -z "$WORKSPACE_DIR" ]; then
     WORKSPACE_DIR="./"
 fi
-WORKSPACE_DIR=$(realpath -m "$WORKSPACE_DIR")
+WORKSPACE_DIR=$(realpath "$WORKSPACE_DIR")
 
 read -p "Enter the version of the everest-dev-environment (default is 'main'): " VERSION
 if [ -z "$VERSION" ]; then
